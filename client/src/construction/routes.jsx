@@ -1,6 +1,7 @@
 import Home from "../pages/Home";
 import Lessons from "../pages/Lessons";
 import Teacher from "../pages/Teacher";
+import LessonsDetails from "../pages/LessonsDetails";
 
 export const routes = [
   {
@@ -14,5 +15,9 @@ export const routes = [
   {
     path: "/teacher",
     component: <Teacher />,
+  },
+  {
+    path: "/lessons/:id",
+    component: <LessonsDetails />,
   },
 ];

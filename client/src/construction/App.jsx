@@ -5,10 +5,11 @@ import Layout from "../components/template/Layout";
 
 import "./App.css";
 
-function App() {
+const App = () => {
   const routeComponents = routes.map(({ path, component }, key) => (
     <Route path={path} element={component} key={key} />
   ));
+
   return (
     <>
       <Layout>
@@ -18,6 +19,6 @@ function App() {
       </Layout>
     </>
   );
-}
+};
 
 export default App;
