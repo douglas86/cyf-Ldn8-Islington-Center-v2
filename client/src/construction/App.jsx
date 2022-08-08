@@ -1,20 +1,19 @@
 import { Route, Routes } from "react-router-dom";
 
-import Home from "../pages/Home";
-import Lessons from "../pages/Lessons";
-import Teacher from "../pages/Teacher";
+import { routes } from "./routes";
 import Layout from "../components/template/Layout";
 
 import "./App.css";
 
 function App() {
+  const routeComponents = routes.map(({ path, component }, key) => (
+    <Route path={path} element={component} key={key} />
+  ));
   return (
     <>
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/lessons" element={<Lessons />} />
-          <Route path="/teacher" element={<Teacher />} />
+          <>{routeComponents}</>
         </Routes>
       </Layout>
     </>
