@@ -20,6 +20,12 @@
 .nav_menu {
   display: flex;
 }
+
+.nav_menu li {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 ul {
   list-style-type: none;
 }
