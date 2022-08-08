@@ -10,9 +10,9 @@ import {
 const router = express.Router();
 
 router
+  .post("/", async (req, res) => postControllers(req, res))
   .get("/", async (req, res) => await getControllers(res))
   .get("/:id", async (req, res) => getControllers(res, req.params.id))
-  .post("/", async (req, res) => postControllers(req, res))
   .put("/:id", async (req, res) => putControllers(req, res, req.params.id))
   .delete("/:id", async (req, res) => deleteControllers(res, req.params.id));
 
