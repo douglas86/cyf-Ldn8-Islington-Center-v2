@@ -8,6 +8,11 @@ import {
   deleteServices,
 } from "../services/lessonsServices.js";
 
+export const postControllers = async (req, res) => {
+  const query = `INSERT INTO lessons (title, img_url, intro, summary, content, video_url) VALUES ($1,$2,$3,$4,$5,$6)`;
+  await postServices(res, query, req.body);
+};
+
 export const getControllers = async (res, id) => {
   let query;
   if (id !== undefined) {
@@ -17,11 +22,6 @@ export const getControllers = async (res, id) => {
     query = `SELECT * FROM lessons ORDER BY id`;
     await getServices(res, query);
   }
-};
-
-export const postControllers = async (req, res) => {
-  const query = `INSERT INTO lessons (title, img_url, intro, summary, content, video_url) VALUES ($1,$2,$3,$4,$5,$6)`;
-  await postServices(res, query, req.body);
 };
 
 export const putControllers = async (req, res, id) => {
