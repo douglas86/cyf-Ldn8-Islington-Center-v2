@@ -23,7 +23,7 @@ const Home = () => {
     <>
       <div className={styles.showcase}>
         <div className={styles.container}>
-          {toHeading("Islington Center for Refugess and Migrants")}
+          {toHeading("Islington Center for Refugees and Migrants")}
           <p className={`lead ${styles.hide_on_small}`}>
             Welcome and supporting Refugees, Asylum seekers, and migrants in our
             community
