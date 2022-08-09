@@ -6,7 +6,7 @@ import { card } from "../molecule/card";
 import { spinner } from "../atom/spinner";
 
 const Cards = () => {
-  const data = useFetch(`${process.env.REACT_APP_URL}/lessons`);
+  const data = useFetch("/lessons");
 
   return (
     <div className={styles.cardContainer}>
