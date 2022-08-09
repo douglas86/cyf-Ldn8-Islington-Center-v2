@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 
+import { toHeading } from "../atom/toHeading";
+
 import styles from "./styles/card.module.css";
 
 export const card = ({ id, title, img_url, summary }) => (
   <>
-    <span>{title}</span>
+    {toHeading(title)}
     <img className={styles.image_card} src={img_url} alt="avatar_img" />
     <p className={styles.disc}>{summary}</p>
     <button className={styles.cardButton}>
