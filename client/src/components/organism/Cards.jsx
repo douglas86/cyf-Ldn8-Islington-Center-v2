@@ -1,27 +1,16 @@
-import { useEffect, useState } from "react";
+import styles from "./styles/Cards.module.css";
+
+import useFetch from "../../hooks/useFetch";
 
 import { card } from "../molecule/card";
 import { spinner } from "../atom/spinner";
 
-import styles from "./styles/Cards.module.css";
-
 const Cards = () => {
-  const [lessons, setLessons] = useState({});
-
-  useEffect(() => {
-    fetch(`${process.env.REACT_APP_URL}/lessons`)
-      .then(async (items) => {
-        const results = await items.json();
-        setLessons(results);
-      })
-      .catch((err) => console.log("err", err));
-  }, []);
-
-  console.log("lessons", lessons);
+  const data = useFetch(`${process.env.REACT_APP_URL}/lessons`);
 
   return (
     <div className={styles.cardContainer}>
-      {Object.entries(lessons).map(([key, values]) => (
+      {Object.entries(data).map(([key, values]) => (
         <div key={key} className={styles.card}>
           {values ? card(values) : spinner()}
         </div>
