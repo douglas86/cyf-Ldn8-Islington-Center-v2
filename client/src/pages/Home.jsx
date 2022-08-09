@@ -3,6 +3,8 @@ import MarkDown from "markdown-to-jsx";
 
 import { toHeading } from "../components/atom/toHeading";
 
+import styles from "./styles/Home.module.css";
+
 const Home = () => {
   const [landing, setLanding] = useState("");
   const file_name = "landing.md";
