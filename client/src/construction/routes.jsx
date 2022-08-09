@@ -15,6 +15,7 @@ export const routes = [
   {
     path: "/teacher",
     component: <Teacher />,
+    protect: true,
   },
   {
     path: "/lessons/:id",
