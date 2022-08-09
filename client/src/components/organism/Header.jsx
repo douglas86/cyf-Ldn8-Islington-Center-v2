@@ -1,7 +1,7 @@
 import { toLink } from "../atom/toLink";
 import { toHeading } from "../atom/toHeading";
 
-import styles from "./Header.module.css";
+import styles from "./styles/Header.module.css";
 
 const Header = () => {
   return (

@@ -1,0 +1,21 @@
+.cardContainer {
+  display: flex;
+  padding: 50px 100px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 30%;
+  padding: 10px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 5px 33px -21px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 0 5px 33px -21px rgba(66, 68, 90, 1);
+  box-shadow: 0 5px 33px -21px rgba(66, 68, 90, 1);
+}
+
+@media screen and (max-width: 400px) {
+  .cardContainer {
+    padding: 50px 10px;
+  }
+}
