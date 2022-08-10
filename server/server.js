@@ -15,12 +15,10 @@ const { PORT } = keys;
 app.use(express.json());
 app.use(cors());
 
-if (process.env.NODE_ENV === "development") {
-  app.use(express.static(path.resolve(__dirname, "../client/build")));
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
-  });
-}
+app.use(express.static(path.resolve(__dirname, "../client/build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
+});
 
 // routes
 app.use("/api", homeRoutes);
