@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd client && npm install && npm start",
     "server": "npm i nodemon && cd server && npm install && nodemon server.js",
-    "start": "concurrently \"npm run client\" \"npm run server\"",
+    "start": "npm i concurrently && concurrently \"npm run client\" \"npm run server\"",
     "heroku-postbuild": "cd client && npm install && npm run build && cd .. && cd server && npm install"
   },
   "repository": {
