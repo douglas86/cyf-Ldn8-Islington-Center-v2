@@ -1,0 +1,27 @@
+{
+  "name": "cyf-ldn8-islington-center-v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && npm install && npm start",
+    "server": "npm i nodemon && cd server && npm install && nodemon server.js",
+    "start": "concurrently \"npm run client\" \"npm run server\"",
+    "heroku-postbuild": "cd client && npm install && npm run build && cd .. && cd server && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/douglas86/cyf-Ldn8-Islington-Center-v2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/douglas86/cyf-Ldn8-Islington-Center-v2/issues"
+  },
+  "homepage": "https://github.com/douglas86/cyf-Ldn8-Islington-Center-v2#readme",
+  "dependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
