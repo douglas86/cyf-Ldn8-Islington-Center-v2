@@ -1,6 +1,6 @@
 import Home from "../pages/Home";
 import Lessons from "../pages/Lessons";
-import Teacher from "../pages/Teacher";
+import Teacher from "../pages/teacher/Teacher";
 import LessonsDetails from "../pages/LessonsDetails";
 
 export const routes = [
