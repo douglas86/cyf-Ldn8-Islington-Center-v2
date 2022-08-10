@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/douglas86/cyf-Ldn8-Islington-Center-v2#readme",
   "dependencies": {
+    "concurrently": "^7.3.0",
     "nodemon": "^2.0.19"
   }
 }

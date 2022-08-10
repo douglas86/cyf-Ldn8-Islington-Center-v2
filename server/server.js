@@ -9,15 +9,14 @@ import questionsRoutes from "./routes/questionsRoutes.js";
 
 const app = express();
 const { PORT } = keys;
-const l = "dfdf";
 
 // middleware
 app.use(express.json());
 app.use(cors());
 
 // routes
-app.use("/", homeRoutes);
-app.use("/lessons", lessonsRoutes);
-app.use("/questions", questionsRoutes);
+app.use("/api", homeRoutes);
+app.use("/api/lessons", lessonsRoutes);
+app.use("/api/questions", questionsRoutes);
 
 app.listen(PORT, () => console.log(`Server listening on Port ${PORT}`));
