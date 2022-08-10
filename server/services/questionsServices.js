@@ -69,7 +69,7 @@ export const putServices = async (req, res) => {
           params[3]
         )
     )
-    .then(() => res.send(`question and answers updated!`))
+    .then(() => res.json({message:`question and answers updated!`}))
     .catch((err) => caught(res, err));
 };
 
@@ -79,6 +79,6 @@ export const deleteServices = async (req, res) => {
   await pool
     .query("DELETE FROM questions WHERE id=$1", [questionId])
     .then(() => pool.query("DELETE FROM questions WHERE id=$1", [questionId]))
-    .then(() => res.send(`question ${questionId} deleted!`))
+    .then(() => res.json({message:`question ${questionId} deleted!`}))
     .catch((err) => caught(res, err));
 };
