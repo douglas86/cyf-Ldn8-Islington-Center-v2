@@ -6,6 +6,7 @@ import { keys } from "./lib/keys.js";
 import homeRoutes from "./routes/homeRoutes.js";
 import lessonsRoutes from "./routes/lessonsRoutes.js";
 import questionsRoutes from "./routes/questionsRoutes.js";
+import * as path from "path";
 
 const app = express();
 const { PORT } = keys;
@@ -13,6 +14,11 @@ const { PORT } = keys;
 // middleware
 app.use(express.json());
 app.use(cors());
+
+app.use(express.static(path.resolve(__dirname, "../client/build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
+});
 
 // routes
 app.use("/api", homeRoutes);
