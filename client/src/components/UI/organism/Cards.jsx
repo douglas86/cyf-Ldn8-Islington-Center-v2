@@ -1,6 +1,6 @@
 import styles from "./styles/Cards.module.css";
 
-import useFetch from "../../hooks/useFetch";
+import useFetch from "../../../hooks/useFetch";
 
 import { card } from "../molecule/card";
 import { spinner } from "../atom/spinner";

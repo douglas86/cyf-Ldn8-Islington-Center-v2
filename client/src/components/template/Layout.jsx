@@ -1,4 +1,4 @@
-import Header from "../organism/Header";
+import Header from "../UI/organism/Header";
 
 const Layout = ({ children }) => {
   return (
