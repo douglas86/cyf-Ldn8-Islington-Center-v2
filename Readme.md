@@ -38,7 +38,7 @@ https://www.youtube.com/watch?v=ZJxUOOND5_A
 </ul>
 <i>hooks - All custom hooks site here</i><br>
 <i>assets - All assets gets placed from here, which would include all images</i><br>
-<li>Context - this is used for if I am wanting to store my state somewhere for all components to see</li>
+<li>Context - this is used for if I am wanting to store my state somewhere for all components to see</li><br/>
 
 ![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png) `Back end - server side`
 
