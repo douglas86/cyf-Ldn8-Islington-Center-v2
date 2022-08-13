@@ -1,5 +1,5 @@
 import Cards from "../components/UI/organism/Cards";
-import { toHeading } from "../components/utils/toHeading";
+import { toHeading } from "../components/utils/toFunc/toHeading";
 
 const Lessons = () => {
   return (

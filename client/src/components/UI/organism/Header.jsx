@@ -1,5 +1,5 @@
-import { toLink } from "../../utils/toLink";
-import { toHeading } from "../../utils/toHeading";
+import { toLink } from "../../utils/toFunc/toLink";
+import { toHeading } from "../../utils/toFunc/toHeading";
 
 import styles from "./styles/Header.module.css";
 import { useAuth0 } from "@auth0/auth0-react";

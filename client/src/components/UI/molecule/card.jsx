@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { toHeading } from "../../utils/toHeading";
+import { toHeading } from "../../utils/toFunc/toHeading";
 
 import styles from "./styles/card.module.css";
 

@@ -33,19 +33,19 @@ https://www.youtube.com/watch?v=ZJxUOOND5_A
 <i>pages - Whenever a route is called a page needs to be displayed</i><br>
 <i>construction - This is where the main app sites, the App.jsx file</i><br>
 <ul>
-    <li>App.jsx - this is the main entry point into the website, all routes get done here and the Layout template will be called</li>
+    <li>App.jsx - this is the main entry point into the website, all isRoutes get done here and the Layout template will be called</li>
     <li>App.css - this is going to be used for all global css styling</li>
 </ul>
-<i>hooks - All custom hooks site here</i><br>
+<i>hooks - All custom hooks get placed here</i><br>
 <i>assets - All assets gets placed from here, which would include all images</i><br>
 <i>Context - this is used for if I am wanting to store my state somewhere for all components to see</i><br/>
 
 ![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png) `Back end - server side`
 
 <i>server.js - this is the main file that will run the server, all middleware gets placed here</i><br>
-<i>routes - this is the entry point into calling the endpoint</i><br>
-<i>controllers - from routes to controllers this is where all the logic for the routes sites</i><br>
-<i>services - this is where all the helper functions site for the routes</i><br>
+<i>isRoutes - this is the entry point into calling the endpoint</i><br>
+<i>controllers - from isRoutes to controllers this is where all the logic for the isRoutes sites</i><br>
+<i>services - this is where all the helper functions site for the isRoutes</i><br>
 <i>lib - this is where all the most important function will be placed like keys.js for handling process.env and pool.js
 for connecting to db</i><br>
 <i>utils - this is used for all miscellaneous functions</i><br>

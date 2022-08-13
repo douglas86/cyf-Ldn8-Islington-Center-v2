@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-// routes
+// isRoutes
 app.use("/api", homeRoutes);
 app.use("/api/lessons", lessonsRoutes);
 app.use("/api/questions", questionsRoutes);
