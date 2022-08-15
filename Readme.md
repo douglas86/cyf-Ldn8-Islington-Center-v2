@@ -11,7 +11,7 @@ https://www.youtube.com/watch?v=ZJxUOOND5_A
 
 # Structure of this project?
 
-![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png) `Front end - client side`
+### Front end - client side
 
 <i>components - This is where the entire app resides and takes shape</i><br>
 <ul>
@@ -40,7 +40,7 @@ https://www.youtube.com/watch?v=ZJxUOOND5_A
 <i>assets - All assets gets placed from here, which would include all images</i><br>
 <i>Context - this is used for if I am wanting to store my state somewhere for all components to see</i><br/>
 
-![#f03c15](https://via.placeholder.com/15/f03c15/f03c15.png) `Back end - server side`
+### Back end - server side
 
 <i>server.js - this is the main file that will run the server, all middleware gets placed here</i><br>
 <i>isRoutes - this is the entry point into calling the endpoint</i><br>
