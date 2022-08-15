@@ -7,7 +7,6 @@ import { spinner } from "../atom/spinner";
 
 const Cards = () => {
   const data = useFetch("/lessons");
-  console.log("data", data);
 
   return (
     <div className={styles.cardContainer}>
