@@ -23,9 +23,9 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // isRoutes
-app.use("/", homeRoutes);
-app.use("/lessons", lessonsRoutes);
-app.use("/questions", questionsRoutes);
+app.use("/api", homeRoutes);
+app.use("/api/lessons", lessonsRoutes);
+app.use("/api/questions", questionsRoutes);
 
 // catch all method
 app.get("*", (req, res) => {
