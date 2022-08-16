@@ -1,9 +1,9 @@
-import Home from "../pages/Home";
-import Lessons from "../pages/Lessons";
-import Teacher from "../pages/Teacher";
-import LessonsDetails from "../pages/LessonsDetails";
+import Home from "../../../pages/Home";
+import Lessons from "../../../pages/Lessons";
+import Teacher from "../../../pages/Teacher";
+import LessonsDetails from "../../../pages/LessonsDetails";
 
-export const routes = [
+export const isRoutes = [
   {
     path: "/",
     component: <Home />,
@@ -15,6 +15,7 @@ export const routes = [
   {
     path: "/teacher",
     component: <Teacher />,
+    protect: true,
   },
   {
     path: "/lessons/:id",

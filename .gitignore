@@ -1,5 +1,5 @@
 # dependancies
-/node_modules
+node_modules/
 
 # misc
 .idea/
@@ -9,4 +9,4 @@
 /coverage
 
 # production
-/build
+client/build/
