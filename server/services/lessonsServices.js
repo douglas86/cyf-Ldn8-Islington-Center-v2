@@ -1,6 +1,7 @@
 import { pool } from "../lib/pool.js";
-import { then, thenWithMessage } from "../utils/then.js";
+import { then } from "../utils/then.js";
 import { caught } from "../utils/catch.js";
+import { thenWithMessage } from "../utils/thenWithMessage.js";
 
 export const getServices = async (res, query) => {
   await pool
@@ -41,7 +42,12 @@ export const putServices = async (
 
 export const deleteServices = async (res, id) => {
   await pool
-    .query(`DELETE FROM lessons WHERE id=$1`, [id])
+    .query(
+      `DELETE
+                FROM lessons
+                WHERE id = $1`,
+      [id]
+    )
     .then(() => thenWithMessage(res, "Lesson Deleted"))
     .catch((err) => caught(res, err));
 };

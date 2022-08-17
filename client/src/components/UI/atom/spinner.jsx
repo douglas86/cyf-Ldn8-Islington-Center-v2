@@ -1,7 +1,9 @@
 import { Spinner } from "react-bootstrap";
 
+import styles from "./styles.module.css";
+
 export const spinner = () => (
-  <div style={{ textAlign: "center", margin: "3rem" }}>
+  <div className={styles.spinner}>
     <Spinner
       animation="border"
       variant="success"
