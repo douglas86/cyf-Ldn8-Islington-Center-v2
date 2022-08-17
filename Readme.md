@@ -12,7 +12,29 @@ https://www.youtube.com/watch?v=ZJxUOOND5_A
 
 # Structure of this project?
 
-### Front end - client side
+## Front end - client side
+
+### structure of my imports
+
+<ul>
+    <li>npm packages at the very top</li>
+    <li>Followed by a space between</li>
+    <li>The components are to follow</li>
+    <li>template</li>
+    <li>organism</li>
+    <li>molecule</li>
+    <li>atoms</li>
+    <li>utils</li>
+    <li>Followed by a space between</li>
+    <li>hooks</li>
+    <li>assets</li>
+    <li>context</li>
+    <li>Followed by a space between</li>
+    <li>styles</li>
+    <li>media queries</li>
+</ul>
+
+### structure of components
 
 <i>components - This is where the entire app resides and takes its shape</i><br>
 <ul>
@@ -40,7 +62,25 @@ https://www.youtube.com/watch?v=ZJxUOOND5_A
 <i>assets - are for all the extra bits and pieces that don't really belong in any of the other directories like images or markdown files</i><br>
 <i>Context - this directory is used for if I am wanting to use state management in my project</i>
 
-### Back end - server side
+## Back end - server side
+
+### structure of my imports
+
+    I am just giving the names of the directories, 
+    whenever you import it doesn't matter the files within the directory
+
+<ul>
+    <li>npm packages at the very top</li>
+    <li>Followed by a space</li>
+    <li>lib</li>
+    <li>utils</li>
+    <li>Followed by a space</li>
+    <li>routers</li>
+    <li>controllers</li>
+    <li>services</li>
+</ul>
+
+### structure of directories
 
 <i>server.js - this is the main entry point into the server, all middleware gets placed here. This is a no routes zone.
 Only if you are wanting a catch-all method then that will go here.</i><br>
@@ -51,6 +91,25 @@ Only if you are wanting a catch-all method then that will go here.</i><br>
 used for handling env variables or pool.js to connect to the db</i>
 <i>utils - this stands for utilities this is where all miscellaneous helper functions gets placed, like if you are
 wanting to use a .then or .catch to keep it consistent</i>
+
+## Team members that were involved in this project and what they did
+
+### Douglas Maxton
+
+I was one of the volunteers to help the trainees out in this project,
+I had started this repo as a way in helping Saf out with the login,
+It also gave me a chance to try out a new file structure that I wanted to get up and running.
+I had always believed that the best way to learn a topic was to teach it.
+Doing this repo was a way to see if Juniors could also understand what sort of message I was trying to conveyor and how
+neat and clean we could design our code for a better understanding.
+
+### Rahwa Ghebremichael
+
+### Saf
+
+### Saman
+
+### Teniola
 
 
 
