@@ -1,9 +1,9 @@
-import styles from "./styles/Cards.module.css";
+import { card } from "../molecule/card";
+import { spinner } from "../atom/spinner";
 
 import useFetch from "../../../hooks/useFetch";
 
-import { card } from "../molecule/card";
-import { spinner } from "../atom/spinner";
+import styles from "./styles/Cards.module.css";
 
 const Cards = () => {
   const data = useFetch("/lessons");

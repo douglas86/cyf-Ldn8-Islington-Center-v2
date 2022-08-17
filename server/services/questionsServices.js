@@ -1,6 +1,6 @@
 import { pool } from "../lib/pool.js";
-import { thenWithMessage } from "../utils/then.js";
 import { caught } from "../utils/catch.js";
+import { thenWithMessage } from "../utils/thenWithMessage.js";
 
 export const postServices = async (res, params) => {
   await pool
@@ -27,8 +27,8 @@ export const getServices = async (res, query, lessonId) => {
     for (let question of result.rows) {
       const answerResults = await pool.query(
         `SELECT id, is_correct, answer
-           FROM answers
-           WHERE question_id = $1`,
+                 FROM answers
+                 WHERE question_id = $1`,
         [question.id]
       );
       question["answers"] = answerResults.rows;
@@ -49,10 +49,10 @@ export const putServices = async (req, res) => {
   await pool
     .query(
       `UPDATE questions
-           SET exam_id=$1,
-               question=$2,
-               image=$3
-           WHERE id = $4`,
+             SET exam_id=$1,
+                 question=$2,
+                 image=$3
+             WHERE id = $4`,
       param
     )
     .then(

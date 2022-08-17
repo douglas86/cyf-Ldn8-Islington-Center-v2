@@ -1,8 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 
-import { isRoutes } from "../components/utils/isFunc/isRoutes";
-
 import Layout from "../components/UI/template/Layout";
+import { isRoutes } from "../components/utils/isFunc/isRoutes";
 
 import "./App.css";
 

@@ -79,6 +79,8 @@ https://www.youtube.com/watch?v=ZJxUOOND5_A
     <li>routers</li>
     <li>controllers</li>
     <li>services</li>
+    <li>Followed by a space</li>
+    <li>Then all constants or lets variables</li>
 </ul>
 
 ### structure of directories
