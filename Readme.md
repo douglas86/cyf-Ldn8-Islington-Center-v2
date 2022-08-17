@@ -19,7 +19,8 @@ https://www.youtube.com/watch?v=ZJxUOOND5_A
 <ul>
     <li>npm packages at the very top</li>
     <li>Followed by a space between</li>
-    <li>The components are to follow</li>
+    <li>pages</li>
+    <li>Followed by a space between</li>
     <li>template</li>
     <li>organism</li>
     <li>molecule</li>
@@ -82,15 +83,14 @@ https://www.youtube.com/watch?v=ZJxUOOND5_A
 
 ### structure of directories
 
-<i>server.js - this is the main entry point into the server, all middleware gets placed here. This is a no routes zone.
-Only if you are wanting a catch-all method then that will go here.</i><br>
-<i>router - this is where all my router endpoints get placed</i><br>
-<i>controllers - this is where the logic for my routes gets put together.</i><br>
-<i>services - this is for all the helper functions of the routes</i><br>
-<i>lib - lib stands for library, this is where the files that you use the most gets put together, like keys.js which is
-used for handling env variables or pool.js to connect to the db</i>
-<i>utils - this stands for utilities this is where all miscellaneous helper functions gets placed, like if you are
-wanting to use a .then or .catch to keep it consistent</i>
+<ul>
+    <li><i>server.js</i> - this is the main entry point into the server, all middleware gets placed here. This is a no routes zone. Only if you are wanting a catch-all method then that will go here.</li>
+    <li><i>router</i> - this is where all my router endpoints get placed</li>
+    <li><i>controllers</i> - this is where the logic for my routes gets put together.</li>
+    <li><i>services</i> - this is for all the helper functions of the routes</li>
+    <li><i>lib</i> - lib stands for library, this is where the files that you use the most gets put together, like keys.js which is used for handling env variables or pool.js to connect to the db</li>
+    <li><i>utils</i> - this stands for utilities this is where all miscellaneous helper functions gets placed, like if you are wanting to use a .then or .catch to keep it consistent throughout your api</li>
+</ul>
 
 ## Team members that were involved in this project and what they did
 
