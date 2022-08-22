@@ -7,10 +7,12 @@ export const isRoutes = [
   {
     path: "/",
     component: <Home />,
+    protect: false,
   },
   {
     path: "/lessons",
     component: <Lessons />,
+    protect: false,
   },
   {
     path: "/teacher",
@@ -20,5 +22,6 @@ export const isRoutes = [
   {
     path: "/lessons/:id",
     component: <LessonsDetails />,
+    protect: false,
   },
 ];
