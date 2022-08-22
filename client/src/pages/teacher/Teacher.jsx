@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-//import RenderLesson from "./RenderLesson";
-//import Form from "./Form";
-//import AddQuestion from "./AddQuestion";
+import RenderLesson from "./RenderLesson";
+import Form from "./Form";
+import AddQuestion from "./AddQuestion";
 import axios from "axios";
 
 const Teacher = () => {
-  // const [visibleQuestions, setVisibleQuestions] = useState(false);
-  // const [visibleLessons, setVisibleLessons] = useState(false);
+  const [visibleQuestions, setVisibleQuestions] = useState(false);
+  const [visibleLessons, setVisibleLessons] = useState(false);
    const [allLessons, setAllLessons] = useState([]);
    const [lessons, setLessons] = useState([]);
 
@@ -18,17 +18,17 @@ const Teacher = () => {
     });
   }, []);
 //console.log("lessons", lessons)
-  // const deleteLessons = (arrLesson) => {
-  //   axios
-  //     .delete(`${process.env.REACT_APP_URL}/lessons/${arrLesson.id}`)
-  //     .then((res) => {
-  //       if (res.status === 200) {
-  //         axios.get(`${process.env.REACT_APP_URL}/lessons/`).then((res) => {
-  //           setLessons(res.data);
-  //         });
-  //       }
-  //     });
-  // };
+  const deleteLessons = (arrLesson) => {
+    axios
+      .delete(`${process.env.REACT_APP_URL}/lessons/${arrLesson.id}`)
+      .then((res) => {
+        if (res.status === 200) {
+          axios.get(`${process.env.REACT_APP_URL}/lessons/`).then((res) => {
+            setLessons(res.data);
+          });
+        }
+      });
+  };
 
   return (
     <div>
@@ -43,7 +43,7 @@ const Teacher = () => {
         plans are easy to use and aim to give your students the skills and
         confidence they need to enjoy learning English.
       </p>
-      {/* <div className="add-question">
+      <div className="add-question">
         <p onClick={() => setVisibleQuestions(true)}>Add Question</p>
         <p type="submit" onClick={() => setVisibleQuestions(false)}>
           Cancel
@@ -69,7 +69,7 @@ const Teacher = () => {
             </div>
           ))}
         </div>
-      </div> */}
+      </div> 
     </div>
   );
 };

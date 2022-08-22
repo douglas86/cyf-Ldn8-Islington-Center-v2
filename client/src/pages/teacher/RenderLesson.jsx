@@ -1,5 +1,5 @@
 import { useState } from "react";
-//import "./RenderLesson.css";
+import "./RenderLesson.css";
 import { Link } from "react-router-dom";
 
 const RenderLesson = ({ lesson, isTeacher, deleteLessons }) => {

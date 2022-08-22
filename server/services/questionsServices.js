@@ -1,11 +1,19 @@
 import { pool } from "../lib/pool.js";
-import { thenWithMessage } from "../utils/then.js";
 import { caught } from "../utils/catch.js";
+import { thenWithMessage } from "../utils/thenWithMessage.js";
 
 export const postServices = async (res, params) => {
   await pool
     .query(
-      `WITH q AS (INSERT INTO questions(exam_id,image,question) VALUES ($1,$2,$3) returning *), answer1 as (INSERT INTO answers (answer, is_correct,question_id) VALUES ($4,$5,(SELECT id FROM q)),($6,$7,(SELECT id FROM q)),($8,$9,(SELECT id from q)), ($10,$11,(SELECT id FROM q)) returning *) SELECT * FROM q`,
+      `WITH q AS (
+         INSERT
+         INTO questions(exam_id, image, question)
+         VALUES ($1, $2, $3) returning *), answer1 as (
+         INSERT
+         INTO answers (answer, is_correct, question_id)
+         VALUES ($4, $5, (SELECT id FROM q)), ($6, $7, (SELECT id FROM q)), ($8, $9, (SELECT id from q)), ($10, $11, (SELECT id FROM q)) returning *)
+        SELECT *
+        FROM q`,
       params
     )
     .then(() => thenWithMessage(res, "Question and answer created."))
@@ -18,7 +26,9 @@ export const getServices = async (res, query, lessonId) => {
 
     for (let question of result.rows) {
       const answerResults = await pool.query(
-        `SELECT id, is_correct, answer FROM answers WHERE question_id=$1`,
+        `SELECT id, is_correct, answer
+                 FROM answers
+                 WHERE question_id = $1`,
         [question.id]
       );
       question["answers"] = answerResults.rows;
@@ -38,7 +48,11 @@ export const putServices = async (req, res) => {
   });
   await pool
     .query(
-      `UPDATE questions SET exam_id=$1,question=$2,image=$3 WHERE id=$4`,
+      `UPDATE questions
+             SET exam_id=$1,
+                 question=$2,
+                 image=$3
+             WHERE id = $4`,
       param
     )
     .then(
@@ -69,7 +83,7 @@ export const putServices = async (req, res) => {
           params[3]
         )
     )
-    .then(() => res.json({message:`question and answers updated!`}))
+    .then(() => res.send(`question and answers updated!`))
     .catch((err) => caught(res, err));
 };
 
@@ -79,6 +93,6 @@ export const deleteServices = async (req, res) => {
   await pool
     .query("DELETE FROM questions WHERE id=$1", [questionId])
     .then(() => pool.query("DELETE FROM questions WHERE id=$1", [questionId]))
-    .then(() => res.json({message:`question ${questionId} deleted!`}))
+    .then(() => res.send(`question ${questionId} deleted!`))
     .catch((err) => caught(res, err));
 };

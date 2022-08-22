@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import MarkDown from "markdown-to-jsx";
 
-import { toHeading } from "../components/atom/toHeading";
+import { toHeading } from "../components/utils/toFunc/toHeading";
 
 import styles from "./styles/Home.module.css";
 
@@ -10,7 +10,7 @@ const Home = () => {
   const file_name = "landing.md";
 
   useEffect(() => {
-    import(`../markdown/${file_name}`)
+    import(`../assets/markdown/${file_name}`)
       .then((res) => {
         fetch(res.default)
           .then((res) => res.text())
