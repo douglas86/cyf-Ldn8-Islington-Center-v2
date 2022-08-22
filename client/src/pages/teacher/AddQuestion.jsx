@@ -53,7 +53,7 @@ function AddQuestion() {
     } = values;
 
     axios
-      .post(`${process.env.REACT_APP_URL}/questions`, {
+      .post("https://ldn8-islington.herokuapp.com/questions", {
         lesson_id: lesson,
         image: "",
         question: question,

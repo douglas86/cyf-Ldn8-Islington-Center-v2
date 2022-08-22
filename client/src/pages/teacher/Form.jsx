@@ -17,8 +17,9 @@ function Form({ setLessons }) {
 
   const addContent = (event) => {
     event.preventDefault();
+    
     axios
-      .post(`${process.env.REACT_APP_URL}/lessons`, inputs)
+      .post("https://ldn8-islington.herokuapp.com/lessons", inputs)
 
       .then((res) => {
         if (res.status === 200) {

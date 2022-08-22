@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-//import "./Form.css";
+import "./Form.css";
 
 function EditLesson() {
   const [questions, setQuestions] = useState([]);
@@ -25,9 +25,11 @@ function EditLesson() {
     console.log(inputs);
   };
   const handleDelete = (Qid) => {
-    axios.delete(`${process.env.REACT_APP_URL}/questions/${Qid}`).then(() => {
-      setLoad(true);
-    }, []);
+    axios
+      .delete(`https://ldn8-islington.herokuapp.com/questions/${Qid}`)
+      .then(() => {
+        setLoad(true);
+      }, []);
   };
   const editContent = (event) => {
     event.preventDefault();
@@ -100,9 +102,9 @@ function EditLesson() {
       />
       <section className="q-section">
         <h3>Questions For Lesson {lesson_id}</h3>
-        {questions.map((q) => {
+        {questions.map((q,key) => {
           return (
-            <div>
+            <div key={key}>
               <div className="delete-question">{q.question}</div>
               <button className="q-delete" onClick={() => handleDelete(q.id)}>
                 Delete
