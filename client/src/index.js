@@ -6,13 +6,13 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import App from "./construction/App";
 import reportWebVitals from "./construction/tests/reportWebVitals";
 
+import { keys } from "./components/utils/miscellaneous/keys";
+
 import "./index.css";
 
-const domain = process.env.REACT_APP_DOMAIN;
-const clientId = process.env.REACT_APP_CLIENT_ID;
-const redirectUri = window.location.origin;
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
+const { domain, clientId, redirectUri } = keys;
+
 root.render(
   <React.StrictMode>
     <Auth0Provider
