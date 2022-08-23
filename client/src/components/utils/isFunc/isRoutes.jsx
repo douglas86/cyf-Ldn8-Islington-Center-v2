@@ -2,6 +2,7 @@ import Home from "../../../pages/Home";
 import Lessons from "../../../pages/Lessons";
 import Teacher from "../../../pages/teacher/Teacher";
 import LessonsDetails from "../../../pages/LessonsDetails";
+import Quiz from "../../../pages/Quiz";
 import EditLesson from "../../../pages/teacher/EditLesson";
 
 export const isRoutes = [
@@ -25,5 +26,9 @@ export const isRoutes = [
   {
     path: "/edit-lesson/:id",
     component: <EditLesson />,
+  },
+  {
+    path: "/questions/lessons/:id",
+    component: <Quiz />,
   },
 ];
