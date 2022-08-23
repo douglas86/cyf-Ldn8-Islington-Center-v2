@@ -22,7 +22,6 @@ function EditLesson() {
 
   const handleInputChange = (event, names) => {
     setInputs({ ...inputs, [names]: event.target.value });
-    console.log(inputs);
   };
   const handleDelete = (Qid) => {
     axios
