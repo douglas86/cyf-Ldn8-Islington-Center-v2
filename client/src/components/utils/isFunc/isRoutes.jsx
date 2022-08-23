@@ -1,7 +1,8 @@
 import Home from "../../../pages/Home";
 import Lessons from "../../../pages/Lessons";
-import Teacher from "../../../pages/Teacher";
+import Teacher from "../../../pages/teacher/Teacher";
 import LessonsDetails from "../../../pages/LessonsDetails";
+import EditLesson from "../../../pages/teacher/EditLesson";
 
 export const isRoutes = [
   {
@@ -20,5 +21,9 @@ export const isRoutes = [
   {
     path: "/lessons/:id",
     component: <LessonsDetails />,
+  },
+  {
+    path: "/edit-lesson/:id",
+    component: <EditLesson />,
   },
 ];

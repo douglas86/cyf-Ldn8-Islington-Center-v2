@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import MarkDown from "markdown-to-jsx";
-
 import { toHeading } from "../components/utils/toFunc/toHeading";
-
 import styles from "./styles/Home.module.css";
 
 const Home = () => {

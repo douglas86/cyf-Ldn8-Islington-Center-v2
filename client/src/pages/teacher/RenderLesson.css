@@ -1,0 +1,54 @@
+.lesson-wrapper {
+  display: grid;
+  width: 100%;
+  border-radius: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 0.8rem;
+}
+
+.lesson-card {
+  background-color: #e8f2f7;
+  text-align: center;
+  padding: 3px;
+  margin:8px;
+}
+.summary,
+.intro {
+  height: 80px;
+  margin-bottom: 9%;
+}
+.content {
+  height: 15%;
+}
+
+.content h2 {
+  margin-top: 1%;
+}
+iframe {
+  margin-top: 8px;
+}
+
+.btn-1,
+.btn-2 {
+  border: none;
+  background-color: brown;
+  width: 30%;
+  margin: 2rem 5px;
+  font-size: 15px;
+  font-family: Arial;
+  cursor: pointer;
+  height: 30px;
+  border-width: 1px;
+  border-color: #d6bcd6;
+  color: #f9f0f8;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 3px 4px 0px 0px #899599;
+}
+@media only screen and (max-width: 600px) {
+  .intro {
+    margin-bottom: 1%;
+  }
+}

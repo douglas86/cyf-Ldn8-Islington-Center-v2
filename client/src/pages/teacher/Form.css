@@ -1,0 +1,180 @@
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+.add-content,
+.add-question {
+  font-size: 20px;
+  cursor: pointer;
+  border: 1px solid rgb(214, 214, 225);
+  border-style: none;
+  border-radius: 10px;
+  width: 50%;
+  margin-left: 25%;
+  display: flex;
+  gap: 8em;
+  padding: 3px;
+  margin-bottom: 2%;
+  justify-content: center;
+  background-image: linear-gradient(rgba(2, 27, 40, 0), #14516b);
+}
+.lesson-plan,
+Form {
+  width: 50vw;
+  margin: 3% 25%;
+  border-style: none;
+  border-radius: 10px;
+}
+.submit-question,
+.q-delete {
+  font-size: 15px;
+  font-family: Arial;
+  margin-left: 35%;
+  cursor: pointer;
+  width: 180px;
+  height: 50px;
+  border-width: 1px;
+  color: #3a8a9e;
+  border-color: #d6bcd6;
+  font-weight: bold;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 3px 4px 0px 0px #899599;
+  text-shadow: 0px 1px 0px #e1e2ed;
+  background: linear-gradient(#ededed, #bab1ba);
+}
+.submit-question:hover {
+  background: linear-gradient(#bab1ba, #bdf7c6);
+}
+.submit-lesson:hover {
+  background: linear-gradient(#bab1ba, #bdf7c6);
+}
+textarea {
+  width: 240px;
+  margin-left: 10%;
+}
+
+.q-delete {
+  width: 100px;
+  font-size: 14px;
+  height: 30px;
+  background: rgb(237, 39, 39);
+  color: #e6e6e6;
+  text-shadow: none;
+  font-family: "Times New Roman", Times, serif;
+}
+.delete-question {
+  border: 1px dashed black;
+  padding: 5px;
+}
+.q-section {
+  border: 1px solid rgb(241, 6, 6);
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: 5px 10px #888888;
+  margin: 10% 1%;
+  width: 100%;
+}
+@media only screen and (max-width: 600px) {
+  .add-content,
+  .add-question {
+    font-size: 14px;
+    gap: 2em;
+  }
+  h1 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 12px;
+  }
+}
+
+.title-text {
+  animation: color-animation 4s linear infinite;
+}
+.text-1 {
+  --color-1: #df8453;
+  --color-2: #3d8dae;
+  --color-3: #e4a9a8;
+}
+
+.text-2 {
+  --color-1: #dbad4a;
+  --color-2: #accfcb;
+  --color-3: #17494d;
+}
+
+.text-3 {
+  --color-1: #c5c6a9;
+  --color-2: #59726f;
+  --color-3: #815e54;
+}
+@keyframes color-animation {
+  0% {
+    color: var(--color-1);
+  }
+  32% {
+    color: var(--color-1);
+  }
+  33% {
+    color: var(--color-2);
+  }
+  65% {
+    color: var(--color-2);
+  }
+  66% {
+    color: var(--color-3);
+  }
+  99% {
+    color: var(--color-3);
+  }
+  100% {
+    color: var(--color-1);
+  }
+}
+
+.T-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 4vw;
+  text-transform: uppercase;
+}
+.title:hover,
+.lesson-link:hover,
+.add-question:hover,
+.add-content:hover,
+.teacher-link:hover {
+  animation: flip 2s infinite;
+  font-size: 20px;
+  color: #145501;
+  text-transform: uppercase;
+}
+@keyframes flip {
+  0%,
+  50% {
+    transform: rotateX(360deg);
+  }
+}
